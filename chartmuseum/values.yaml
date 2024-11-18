@@ -1,0 +1,14 @@
+chartmuseum:
+  env:
+    open:
+      DISABLE_API: false
+    secret:
+      BASIC_AUTH_USER: admin
+      BASIC_AUTH_PASS: admin123
+  ingress:
+    enabled: true
+    hosts:
+      - name: museum.local
+        path: /
+  persistence:
+    enabled: true

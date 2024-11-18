@@ -1,0 +1,32 @@
+master:
+  service:
+    type: NodePort
+    nodePorts:
+      redis: 30100
+  persistence:
+    enabled: false
+  resources:
+    requests:
+      cpu: 15m
+      memory: 128Mi
+    limits:
+      cpu: 3
+      memory: 4096Mi
+replica:
+  replicaCount: 2
+  persistence:
+    enabled: false
+  resources:
+    requests:
+      cpu: 15m
+      memory: 128Mi
+    limits:
+      cpu: 3
+      memory: 4096Mi
+metrics:
+  enabled: true
+  service:
+    type: NodePort
+    nodePort: 30222
+auth:
+  password: "admin123"

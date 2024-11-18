@@ -1,0 +1,9 @@
+apiVersion: v2
+name: Chartmuseum
+description: Chartmuseum
+version: 0.1.0
+appVersion: "1.0"
+dependencies:
+  - name: chartmuseum
+    version: 3.10.3
+    repository: https://chartmuseum.github.io/charts
